@@ -1,7 +1,6 @@
 // repeated properties are kept in common class
 class TeamMember {
     name;
-    designation = "Support Web Dev";
     address = "BD";
     constructor(name, address) {
         this.name = name;
@@ -17,6 +16,7 @@ class Support extends TeamMember {//extension of common class TeamMember
         super(name, address);//call the parent class dynamic properties.
         this.groupSupportTime = time;
     }
+    designation = "Support Web Dev";
     startSession() {
         console.log(this.name, " start a support session.");
     }
@@ -41,6 +41,7 @@ class NeptuneDev extends TeamMember {
         super(name, address);
         this.codeEditor = editor;
     }
+    designation = "neptune app developer"
     releaseApp(version) {
         console.log(this.name, "realese a version", version);
     }
